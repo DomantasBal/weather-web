@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+#weather-forecast{
+    border: 1px rgba(91, 90, 90, 0.2) solid;
+    box-shadow: 10px 10px 5px #888888;
+    margin-top: 200px;
+    margin: 10px;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+
+/* HEADER */
+header{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+header .logo{
+    margin-left: 30px;
+    transform: scale(50%);
+}
+
+ul{
+    display: none;
+}
+
+li{
+    margin: 0px 10px;
+    margin-right: 40px;
+    list-style-type: none;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+a:hover{
+    color: orange;
+}
+
+#burger{
+    margin-right: 20px;
+}
+
+.line{
+    border-bottom: solid white 2px;
+    margin: 10px;
+    width: 30px;
+}
+
+
+
+
+/* Content */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: grey;
+}
+
+.title h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.title {
+    margin: 15px;
+}
+
+/* ===== TEMPERATURE n STATS MIDDLE PART ===== */
+
+
+/* LAYOUT */
+.tempContainer{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.tempContainer .stats {
+    padding-right: 15%;
+}
+.temperature{
+    display: flex;
+    /* FIX VERTICAL ALIGN */
+}
+
+.temperature .tempNumber{
+    font-size: 3rem;
+}
+
+.temperature .tempFaren{
+    font-weight: 200;
+}
+
+.temperature img{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/* ===== Temperature days Grid Bottom Section ===== */
+
+
+.temp-container{ 
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.dayContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / span 7;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+
+.dayContainer{
+    border-top: 1px rgba(91, 90, 90, 0.2) solid;
+}
+
+.dayContainer img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+
+/* SUN ANIMATION */
+
+@keyframes sun{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+.dayContainer .sun{
+    transform: scale(80%);
+    animation: sun;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+.dayContainer:last-of-type{
+    border-bottom: 1px rgba(91, 90, 90, 0.2) solid;
+    padding-bottom: 20px;
+}
+
+.dayContainer .polen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 25px;
+}
+
+/* ============================= TABLETS =============================  */
+
+@media screen and (min-width: 768px){
+    .temp-day-night{
+        display:flex;
+    }
+    .temp-day-night p:nth-child(1) {
+        margin-right:60px; 
+    }
+
+   .dayContainer .polen{
+    flex-direction: row;
+    }
+    .dayContainer .polen p{
+        margin-left: 10px;
+        }
+
+    .tempContainer .stats {
+            padding-right: 30%;
+        }
+}
+
+
+/* ============================= DESKTOP =============================  */
+
+@media screen and (min-width: 1024px){
+
+    .temp-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .dayContainer{
+        flex-direction: column;
+    }
+    
+    .dayContainer h3 {
+        margin-bottom: 5px;
+    }
+
+    .dayContainer img{
+        margin-bottom: 5px;
+    }
+
+    .temp-day-night p:nth-child(1) {
+        margin-right:15px; 
+    }
+
+    .dayContainer,  .dayContainer:last-of-type {
+        border: none;
+    }
+
+    .tempContainer .stats {
+        padding-right: 49%;
+    }
+
+    .dayContainer:last-of-type{
+        padding-bottom: 0px;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    #burger{
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
