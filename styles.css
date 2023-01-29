@@ -98,17 +98,22 @@ p{
 .tempContainer .stats {
     padding-right: 15%;
 }
+
 .temperature{
-    display: flex;
-    /* FIX VERTICAL ALIGN */
+    /* display: flex; */
 }
 
-.temperature .tempNumber{
+.tempNumber{
     font-size: 3rem;
+    vertical-align: top;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.temperature .tempFaren{
+.tempFaren{
     font-weight: 200;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .temperature img{
@@ -146,7 +151,6 @@ p{
     height: 80px;
     object-fit: cover;
 }
-
 
 /* SUN ANIMATION */
 
