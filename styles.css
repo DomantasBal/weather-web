@@ -139,12 +139,9 @@ p{
     grid-column: 1 / span 7;
     margin: 10px;
     padding-top: 20px;
-}
-
-
-.dayContainer{
     border-top: 1px rgba(91, 90, 90, 0.2) solid;
 }
+
 
 .dayContainer img{
     width: 80px;
